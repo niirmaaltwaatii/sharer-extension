@@ -9,6 +9,12 @@ function shrimg(info, tab){
         "url" : "https://www.facebook.com/sharer.php?u=" + info.srcUrl + "",
         "type": "popup"
     });
+    // copy image link
+    var copyFrom = document.createElement("textarea");
+    copyFrom.textContent = info.srcUrl;
+    document.body.appendChild(copyFrom);
+    copyFrom.select();
+    document.execCommand('copy');
 }
 
 function shrquote(info, tab){
